@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* Variables for easier theme management */
+:root {
+    --primary-color: #0eb2a6;
+    --primary-shadow-color: rgb(11, 133, 124);
+    --text-color-dark: #000000;
+    --text-color-light: #ffffff;
+    --text-color-gray: gray;
+    --light-gray: lightgray;
+    --button-hover-color: antiquewhite;
+    --accordion-hover-bg: #f8f9fa;
+}
+
+/* --- General & Utility Styles --- */
+hr {
+    height: 7px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to left, black, var(--primary-color));
+}
+
+.name-title,
+.titles-custom-color {
+    text-align: start; 
+    font-weight: 600; 
+    color: var(--primary-color);
+    text-shadow: var(--primary-shadow-color) 1px 1px 1px;
+}
+
+.titles-custom-color {
+    font-weight: 400;
+}
+
+.custom-color {
+    background-color: var(--primary-color);
+}
+
+/* --- Quotes Section --- */
+.quotes {
+    quotes: "“" "”";
+    position: relative;
+    padding-left: 40px;
+}
+
+.quotes::before,
+.quotes::after {
+    font-size: 4em;
+    color: var(--primary-color);
+    position: absolute;
+    font-family: Georgia, serif;
+}
+
+.quotes::before {
+    content: open-quote;
+    top: -30px;
+    left: 0;
+}
+
+.quotes::after {
+    content: close-quote;
+    bottom: -25px;
+}
+
+/* --- Animation Text Section --- */
+.animation-text {
+    width: 620px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    background: none; 
+}
+
+.animation-text .text {
+    position: relative;
+    color: var(--text-color-dark);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.animation-text .text.first-text {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+.sec-text::after,
+#cursor {
+    content: '|'; 
+    position: absolute;
+    animation: blink 1s step-start infinite;
+    opacity: 1;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- Navigation & Buttons --- */
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color);
+    border-radius: 15px; 
+}
+
+.social-custom-color {
+    color: var(--primary-color);
+}
+
+.social-custom-color:hover {
+    color: var(--primary-color);
+    opacity: 70%;
+}
+
+.custom-button {
+    color: var(--text-color-light);
+    background-color: var(--primary-color);
+    border-radius: 15px;
+}
+
+.custom-button:hover {
+    color: var(--button-hover-color);
+    background-color: var(--primary-color);
+    opacity: 70%;
+}
+
+/* --- Circle Icon Style --- */
+.circle {
+    height: 70px;
+    width: 70px;
+    background-color: var(--light-gray);
+    color: var(--text-color-dark);
+    padding: 12px;
+    font-size: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* --- Card Hover Effects --- */
+.card:hover .circle {
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+    transition: 0.3s;
+}
+
+.card:hover h4 {
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+.card {
+    border: none;
+    outline: none;
+    box-shadow: -8px 6px 89px -45px rgba(0, 0, 0, 0.75);
+}
+
+.card p {
+    color: var(--text-color-gray);
+}
+
+.contact:hover {
+    opacity: 60%;
+}
+
+.hide-text {
+    visibility: hidden;
+}
+
+/* --- Education Section (Timeline) --- */
+
+.main-timeline-2 {
+    position: relative;
+}
+
+.main-timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-2 {
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-2::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -11px;
+    background-color: var(--primary-color);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.left-2 {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+}
+
+.right-2 {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+}
+
+.left-2::before,
+.right-2::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px; 
+    border-color: transparent transparent transparent white;
+}
+
+.right-2::before {
+    left: 30px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.left-2::before {
+    right: 30px;
+}
+
+.right-2::after {
+    left: -14px;
+}
+
+/* --- Accordion Styles --- */
+.accordion-item {
+    border: none !important;
+}
+
+.accordion-button {
+    border: none !important;
+    box-shadow: none !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color) !important;
+    color: var(--text-color-light) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.accordion-button:hover {
+    background-color: var(--accordion-hover-bg) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+    background-color: var(--primary-color) !important;
+}
+
+/* --- Media Queries --- */
+@media screen and (max-width: 600px) {
+    .main-timeline-2::after {
+        left: 31px;
+    }
+
+    .timeline-2 {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-2::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .left-2::after,
+    .right-2::after {
+        left: 18px;
+    }
+
+    .left-2::before {
+        right: auto;
+    }
+
+    .right-2 {
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .animation-text .text {
+        font-size: 20px;
+    }
+}
