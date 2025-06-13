@@ -196,9 +196,9 @@ The project has a straightforward file structure:
 │   ├── index.js        (for general JS, e.g., smooth scroll)
 │   └── animation.js    (for the typing animation effect)
 └── img/
-├── bio.jpg             (your profile picture)
-├── favicon.ico         (your favicon)
-└── placeholder_image.jpg (placeholder images for education/portfolio)
+    ├── bio.jpg             (your profile picture)
+    ├── favicon.ico         (your favicon)
+    └── placeholder_image.jpg (placeholder images for education/portfolio)
 
 
 ---
