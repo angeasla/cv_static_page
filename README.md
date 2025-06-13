@@ -189,6 +189,7 @@ By following these steps, your contact form will be fully functional and ready t
 
 The project has a straightforward file structure:
 
+```
 ├── index.html
 ├── styles/
 │   └── style.css
@@ -199,7 +200,7 @@ The project has a straightforward file structure:
     ├── bio.jpg             (your profile picture)
     ├── favicon.ico         (your favicon)
     └── placeholder_image.jpg (placeholder images for education/portfolio)
-
+```
 
 ---
 
